@@ -1,0 +1,47 @@
+### Health Check
+GET http://localhost:8000/health
+
+###
+
+### Query - Single Question
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+  "question": "What is a RAG system?"
+}
+
+###
+
+### Query - Complex Question
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+  "question": "How does retrieval-augmented generation improve LLM responses?"
+}
+
+###
+
+### Query - Empty Question (Error Test)
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+  "question": ""
+}
+
+###
+
+### Ingest Documents
+POST http://localhost:8000/ingest-documents
+
+###
+
+### Ingest URL
+POST http://localhost:8000/ingest-url?url=https://example.com
+
+###
+
+### Root Endpoint
+GET http://localhost:8000/
